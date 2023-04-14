@@ -19,8 +19,19 @@ public class MyArrayList<T> implements MyList<T>{
     }
 
     @Override
-    public void add(T item) {
+    public void add(Object item) {
+        if(size == arr.length){
+            increaseBuffer();
+        }
+        arr[size++] = item;
+    }
 
+    private void increaseBuffer(){
+        Object[] newArr = (Object[]) new Object[arr.length*2];
+        for(int i=0; i< arr.length; i++){
+            newArr[i] = arr[i];
+        }
+        arr = newArr;
     }
 
 
