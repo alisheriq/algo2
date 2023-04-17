@@ -45,6 +45,10 @@ public class MyArrayList<T> implements MyList<T>{
     }
 
     @Override
+    public int size() {
+        return size;
+    }
+    @Override
     public void add(T item, int index) {
 
     }
@@ -52,10 +56,6 @@ public class MyArrayList<T> implements MyList<T>{
     @Override
     public void remove(T item) {
 
-    }
-    @Override
-    public int size() {
-        return 0;
     }
 
     @Override
