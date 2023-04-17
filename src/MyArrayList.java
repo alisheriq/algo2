@@ -25,6 +25,16 @@ public class MyArrayList<T> implements MyList<T>{
         }
         arr[size++] = item;
     }
+    public T get(int index) {
+        checkIndex(index);
+        return (T) arr[index];
+    }
+
+    private void checkIndex(int index) {
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
+    }
 
     private void increaseBuffer(){
         Object[] newArr = (Object[]) new Object[arr.length*2];
@@ -54,12 +64,6 @@ public class MyArrayList<T> implements MyList<T>{
     public void clear() {
 
     }
-
-    @Override
-    public T get(int index) {
-        return (T) arr[index];
-    }
-
     @Override
     public int indexOf(Object o) {
         return 0;
