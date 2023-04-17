@@ -38,6 +38,42 @@ public class MyLinkedList<T> implements MyList<T> {
         size++;
     }
 
+
+    @Override
+    public void add(T item, int index) {
+        checkIndex(index);
+        Node newNode = new Node(item, null, null);
+        if (index == size) { // adding at the end
+            if (tail == null) { // empty list
+                head = newNode;
+                tail = newNode;
+            } else {
+                tail.next = newNode;
+                newNode.prev = tail;
+                tail = newNode;
+            }
+        } else if (index == 0) { // adding at the beginning
+            if (head == null) { // empty list
+                head = newNode;
+                tail = newNode;
+            } else {
+                newNode.next = head;
+                head.prev = newNode;
+                head = newNode;
+            }
+        } else { // adding in the middle
+            Node current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+            newNode.next = current;
+            newNode.prev = current.prev;
+            current.prev.next = newNode;
+            current.prev = newNode;
+        }
+        size++;
+
+    }
     @Override
     public T get(int index) {
         checkIndex(index);
@@ -136,13 +172,6 @@ public class MyLinkedList<T> implements MyList<T> {
     public void sort() {
 
     }
-
-    @Override
-    public void add(T item, int index) {
-
-    }
-
-
 
     @Override
     public void clear() {
