@@ -26,11 +26,6 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public boolean contains(Object o) {
-        return false;
-    }
-
-    @Override
     public void add(T item) {
         Node newNode = new Node(item, null, tail);
         if (tail == null) {
@@ -83,6 +78,25 @@ public class MyLinkedList<T> implements MyList<T> {
 
 
     @Override
+    public void checkIndex(int index) {
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        Node current = head;
+        while (current != null) {
+            if (current.element.equals(o)) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    @Override
     public int indexOf(Object o) {
         return 0;
     }
@@ -102,12 +116,6 @@ public class MyLinkedList<T> implements MyList<T> {
 
     }
 
-    @Override
-    public void checkIndex(int index) {
-        if(index < 0 || index >= size){
-            throw new IndexOutOfBoundsException();
-        }
-    }
 
     @Override
     public void remove(T item) {

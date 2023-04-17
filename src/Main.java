@@ -8,5 +8,7 @@ public class Main {
         myLinkedList.remove(0);
         System.out.println(myLinkedList.get(0));
         System.out.println(myLinkedList.get(1));
+        System.out.println(myLinkedList.contains("France"));
+        System.out.println(myLinkedList.contains("England"));
     }
 }
