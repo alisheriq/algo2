@@ -83,7 +83,9 @@ public class MyArrayList<T> implements MyList<T>{
 
     @Override
     public void clear() {
-
+        this.arr = (Object[]) new Object[5];
+        this.size = 0;
+        this.index = 0;
     }
     @Override
     public int indexOf(Object o) {
