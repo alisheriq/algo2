@@ -7,7 +7,7 @@ public class Main {
         myLinkedList.add("Norway");
         myLinkedList.add("Norway");
         System.out.println(myLinkedList.get(0));
-        myLinkedList.remove(0);
+        myLinkedList.remove("England");
         System.out.println(myLinkedList.get(0));
         System.out.println(myLinkedList.get(1));
         System.out.println(myLinkedList.contains("France"));

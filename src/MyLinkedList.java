@@ -126,6 +126,12 @@ public class MyLinkedList<T> implements MyList<T> {
         return last;
     }
 
+
+    @Override
+    public void remove(T item) {
+        remove(indexOf(item));
+    }
+
     @Override
     public void sort() {
 
@@ -137,9 +143,6 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
 
-    @Override
-    public void remove(T item) {
-    }
 
     @Override
     public void clear() {
