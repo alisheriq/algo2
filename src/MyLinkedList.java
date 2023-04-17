@@ -32,6 +32,35 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void add(T item) {
+        Node newNode = new Node(item, null, tail);
+        if (tail == null) {
+            head = newNode;
+        } else
+        {
+            tail.next = newNode;
+        }
+        tail = newNode;
+        size++;
+    }
+
+    @Override
+    public T get(int index) {
+
+        return null;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public void sort() {
 
     }
 
@@ -57,26 +86,6 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void clear() {
-
-    }
-
-    @Override
-    public T get(int index) {
-        return null;
-    }
-
-    @Override
-    public int indexOf(Object o) {
-        return 0;
-    }
-
-    @Override
-    public int lastIndexOf(Object o) {
-        return 0;
-    }
-
-    @Override
-    public void sort() {
 
     }
 }
