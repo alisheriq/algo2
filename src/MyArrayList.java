@@ -9,28 +9,19 @@ public class MyArrayList<T> implements MyList<T>{
     }
 
     @Override
-    public int size() {
-        return 0;
-    }
-
-    @Override
-    public boolean contains(Object o) {
-        return false;
-    }
-
-    @Override
     public void add(Object item) {
         if(size == arr.length){
             increaseBuffer();
         }
         arr[size++] = item;
     }
+    @Override
     public T get(int index) {
         checkIndex(index);
         return (T) arr[index];
     }
-
-    private void checkIndex(int index) {
+    @Override
+    public void checkIndex(int index) {
         if(index < 0 || index >= size){
             throw new IndexOutOfBoundsException();
         }
@@ -44,6 +35,14 @@ public class MyArrayList<T> implements MyList<T>{
         arr = newArr;
     }
 
+    @Override
+    public void remove(int index) {
+        checkIndex(index);
+        for(int i= index + 1; i<size; i++){
+            arr[i-1] = arr[i];
+        }
+        size--;
+    }
 
     @Override
     public void add(T item, int index) {
@@ -51,13 +50,17 @@ public class MyArrayList<T> implements MyList<T>{
     }
 
     @Override
-    public boolean remove(T item) {
-        return false;
+    public void remove(T item) {
+
+    }
+    @Override
+    public int size() {
+        return 0;
     }
 
     @Override
-    public T remove(int index) {
-        return null;
+    public boolean contains(Object o) {
+        return false;
     }
 
     @Override
