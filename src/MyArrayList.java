@@ -16,6 +16,20 @@ public class MyArrayList<T> implements MyList<T>{
         }
         arr[size++] = item;
     }
+
+
+    @Override
+    public void add(Object item, int index){
+        checkIndex(index);
+        if(size == arr.length){
+            increaseBuffer();
+        }
+        size++;
+        for(int i= size-1; i>index; i--){
+            arr[i] = arr[i-1];
+        }
+        arr[index] = item;
+    }
     @Override
     public T get(int index) {
         checkIndex(index);
@@ -46,23 +60,20 @@ public class MyArrayList<T> implements MyList<T>{
     }
 
     @Override
+    public void remove(T item) {
+        remove(indexOf(item));
+    }
+
+    @Override
     public int size() {
         return size;
     }
-    @Override
-    public void add(T item, int index) {
 
-    }
-
-    @Override
-    public void remove(T item) {
-
-    }
 
     @Override
     public boolean contains(Object o) {
         for(int i= 0; i<size; i++){
-            if(arr[i] == o){
+            if(arr[i].equals(o)){
                 index = i;
                 return true;
             }
