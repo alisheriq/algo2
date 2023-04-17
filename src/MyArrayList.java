@@ -1,11 +1,12 @@
 public class MyArrayList<T> implements MyList<T>{
 
     private Object[] arr;
-    private int size;
+    private int size, index;
 
     MyArrayList(){
         this.arr = (Object[]) new Object[5];
         this.size = 0;
+        this.index = 0;
     }
 
     @Override
@@ -60,6 +61,12 @@ public class MyArrayList<T> implements MyList<T>{
 
     @Override
     public boolean contains(Object o) {
+        for(int i= 0; i<size; i++){
+            if(arr[i] == o){
+                index = i;
+                return true;
+            }
+        }
         return false;
     }
 
@@ -69,7 +76,10 @@ public class MyArrayList<T> implements MyList<T>{
     }
     @Override
     public int indexOf(Object o) {
-        return 0;
+        if(contains(o)){
+            return index;
+        }
+        return -1;
     }
 
     @Override
