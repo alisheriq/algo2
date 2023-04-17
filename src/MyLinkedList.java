@@ -10,6 +10,13 @@ public class MyLinkedList<T> implements MyList<T> {
             this.prev = prev;
         }
     }
+
+
+    private Node head;
+
+    public MyLinkedList() {
+        head = null;
+    }
     @Override
     public int size() {
         return 0;
