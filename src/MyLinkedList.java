@@ -13,9 +13,11 @@ public class MyLinkedList<T> implements MyList<T> {
 
 
     private Node head;
+    private Node tail;
 
     public MyLinkedList() {
         head = null;
+        tail = null;
     }
     @Override
     public int size() {
