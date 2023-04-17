@@ -1,8 +1,8 @@
 public class MyLinkedList<T> implements MyList<T> {
     private class Node {
-        T element;
-        Node next;
-        Node prev;
+        private T element;
+        private Node next;
+        private Node prev;
 
         public Node(T element, Node next, Node prev) {
             this.element = element;
@@ -45,9 +45,42 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public T get(int index) {
-
-        return null;
+        checkIndex(index);
+        Node current;
+        if (index <= size / 2) {
+            current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+        }
+        else {
+            current = tail;
+            for (int i = size - 1; i > index; i--) {
+                current = current.prev;
+            }
+        }
+        return current.element;
     }
+    @Override
+    public void remove(int index) {
+        checkIndex(index);
+        Node currentNode = head;
+        for (int i = 0; i < index; i++) {
+            currentNode = currentNode.next;
+        }
+        if (currentNode.prev == null) { // node is the head
+            head = currentNode.next;
+        } else {
+            currentNode.prev.next = currentNode.next;
+        }
+        if (currentNode.next == null) { // node is the tail
+            tail = currentNode.prev;
+        } else {
+            currentNode.next.prev = currentNode.prev;
+        }
+        size--;
+    }
+
 
     @Override
     public int indexOf(Object o) {
@@ -71,17 +104,13 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void checkIndex(int index) {
-
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
     }
 
     @Override
     public void remove(T item) {
-
-    }
-
-    @Override
-    public void remove(int index) {
-
     }
 
     @Override
