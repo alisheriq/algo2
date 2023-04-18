@@ -67,6 +67,16 @@ public boolean contains(Object o): Finds the specified element in the linked lis
 public int indexOf(Object o): Returns the index of the first occurrence of the specified element in the list, or -1 if not found.
  
 public int lastIndexOf(Object o): Returns the index of the last occurrence of the specified element in the list, or -1 if not found.
+
+private class Node: A nested private class representing a node in the linked list. It has the following properties:
+
+private T element: The data stored in each node of the list.
+ 
+private Node next: A reference to the next node in the list.
+ 
+private Node prev: A reference to the previous node in the list.
+ 
+public Node(T element, Node next, Node prev): A constructor for the Node class that takes in an element, a reference to the next node, and a reference to the previous node.
 </details>
 
 ## Install
