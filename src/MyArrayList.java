@@ -105,9 +105,21 @@ public class MyArrayList<T> implements MyList<T>{
         }
         return index;
     }
-
     @Override
     public void sort() {
-
+        boolean swapped = true;
+        int n = size;
+        while (swapped) {
+            swapped = false;
+            for (int i = 1; i < n; i++) {
+                if (((Comparable) arr[i-1]).compareTo(arr[i]) > 0) {
+                    Object temp = arr[i-1];
+                    arr[i-1] = arr[i];
+                    arr[i] = temp;
+                    swapped = true;
+                }
+            }
+            n--;
+        }
     }
 }
