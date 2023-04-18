@@ -1,16 +1,16 @@
-# Assigments by Alisher Kulbossynov
+# Assigment 2 by Alisher Kulbossynov
 # Course: Algorithms and Data Structures
 # Teacher: Nursultan Khaimuldin
 ---
 
 ## Tasks from
-- [Moodle of Astana IT](https://moodle.astanait.edu.kz/mod/assign/view.php?id=78445)
+- [Moodle of Astana IT](https://moodle.astanait.edu.kz/mod/assign/view.php?id=80149)
 
 ## Build
 IntelliJ IDEA
 - I used v2022.3.1
 
-## Explanation of the Assignments
+## Explanation of the Assignment
 <details>
 <summary>myArrayList class</summary>
 The MyArrayList class is a generic class that implements the MyList interface. It represents a dynamic array that can hold objects of any type. 
