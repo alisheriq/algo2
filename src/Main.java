@@ -12,10 +12,6 @@ public class Main {
         System.out.println(myLinkedList.get(2));
         System.out.println(myLinkedList.get(3));
         System.out.println(myLinkedList.get(4));
-        //checkComp - function to check if number is Composite or prime
-        // count - counter of total division % == 0
-        //n - number to check for Composite of Prime
-        //check - number to check division n times inside the function checkComp, it will decrease every iteration
 
     }
 }

@@ -10,21 +10,29 @@ public class MyLinkedList<T> implements MyList<T> {
             this.prev = prev;
         }
     }
-
+    // Node - a nested private class representing a node in the linked list
+    // element - the data stored in each node of the list
+    // next - a reference to the next node in the list
+    // prev - a reference to the previous node in the list
 
     private Node head;
     private Node tail;
     private int size;
+    // head - a reference to the first node in the list
+    // tail - a reference to the last node in the list
+    // size - the number of elements in the list
     public MyLinkedList() {
         head = null;
         tail = null;
         size = 0;
     }
+    //size() method returns an int representing the number of elements in the linked list.
     @Override
     public int size() {
         return size;
     }
 
+    // add - a method that adds an element to the end of the list or at a specified index
     @Override
     public void add(T item) {
         Node newNode = new Node(item, null, tail);
@@ -74,6 +82,8 @@ public class MyLinkedList<T> implements MyList<T> {
         size++;
 
     }
+    // get - a method that returns the element at the specified index in the list
+    // returns the element at the specified index in the linked list.
     @Override
     public T get(int index) {
         checkIndex(index);
@@ -92,6 +102,7 @@ public class MyLinkedList<T> implements MyList<T> {
         }
         return current.element;
     }
+    // remove - a method that removes the element at the specified index from the list
     @Override
     public void remove(int index) {
         checkIndex(index);
@@ -112,7 +123,7 @@ public class MyLinkedList<T> implements MyList<T> {
         size--;
     }
 
-
+    // checkIndex - a method that throws an IndexOutOfBoundsException if the given index is out of range
     @Override
     public void checkIndex(int index) {
         if(index < 0 || index >= size){
@@ -120,6 +131,8 @@ public class MyLinkedList<T> implements MyList<T> {
         }
     }
 
+    // contains - a method that finds object in linked list
+    // returns a boolean indicating whether the specified element is present in the linked list.
     @Override
     public boolean contains(Object o) {
         Node current = head;
@@ -131,6 +144,7 @@ public class MyLinkedList<T> implements MyList<T> {
         }
         return false;
     }
+    // indexOf - a method that returns the index of the first occurrence of the specified element in the list, or -1 if not found
 
     @Override
     public int indexOf(Object o) {
@@ -145,7 +159,7 @@ public class MyLinkedList<T> implements MyList<T> {
         }
         return -1;
     }
-
+    // lastIndexOf - a method that returns the index of the last occurrence of the specified element in the list, or -1 if not found
     @Override
     public int lastIndexOf(Object o) {
 
@@ -167,7 +181,7 @@ public class MyLinkedList<T> implements MyList<T> {
     public void remove(T item) {
         remove(indexOf(item));
     }
-
+    // sort - a method that sorts the elements of the list in ascending order
     @Override
     public void sort() {
         boolean swapped;
@@ -196,7 +210,7 @@ public class MyLinkedList<T> implements MyList<T> {
             last = current;
         } while (swapped);
     }
-
+    // clear - a method that removes all elements from the list
     @Override
     public void clear() {
         head = null;
