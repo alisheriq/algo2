@@ -1,69 +1,77 @@
-# Assigment 2 by Alisher Kulbossynov
+# Assigments by Alisher Kulbossynov
 # Course: Algorithms and Data Structures
 # Teacher: Nursultan Khaimuldin
 ---
 
 ## Tasks from
-- [Moodle of Astana IT](https://moodle.astanait.edu.kz/mod/assign/view.php?id=80149)
+- [Moodle of Astana IT](https://moodle.astanait.edu.kz/mod/assign/view.php?id=78445)
 
 ## Build
 IntelliJ IDEA
 - I used v2022.3.1
 
 ## Explanation of the Assignments
-
 <details>
-<summary>Task 1.</summary>
-This task creates an array of integers and then calls a function called findMin to find the minimum value in that array. The findMin function is a recursive function that takes an array and the length of that array as inputs and returns the minimum value in the array.
+<summary>myArrayList class</summary>
+The MyArrayList class is a generic class that implements the MyList interface. It represents a dynamic array that can hold objects of any type. 
+Here is a description of each method in the class:
+ 
+MyArrayList(): This is the constructor of the class. It creates a new MyArrayList object with an initial capacity of 5 elements.
+
+add(Object item): This method adds the specified item to the end of the array. If the array is full, the method calls increaseBuffer() to double its size.
+
+add(Object item, int index): This method adds the specified item at the specified index in the array. If the array is full, the method calls increaseBuffer() to double its size. It also shifts all the elements to the right of the specified index to make space for the new element.
+
+get(int index): This method returns the element at the specified index in the array. It throws an IndexOutOfBoundsException if the index is out of bounds.
+
+checkIndex(int index): This is a helper method that checks if the specified index is within bounds of the array. If the index is out of bounds, it throws an IndexOutOfBoundsException.
+
+increaseBuffer(): This is a helper method that doubles the capacity of the array.
+
+remove(int index): This method removes the element at the specified index from the array. It also shifts all the elements to the right of the specified index to the left to fill the gap.
+
+remove(T item): This method removes the first occurrence of the specified item from the array by calling remove(int index).
+
+size(): This method returns the number of elements in the array.
+
+contains(Object o): This method checks if the array contains the specified object. It returns true if the object is found, and false otherwise.
+
+clear(): This method clears the array by creating a new array of the same size and setting the size to 0.
+
+indexOf(Object o): This method returns the index of the first occurrence of the specified object in the array. If the object is not found, it returns -1.
+
+lastIndexOf(Object o): This method returns the index of the last occurrence of the specified object in the array. If the object is not found, it returns -1.
+
+sort(): This method sorts the elements in the array in ascending order using the bubble sort algorithm. The elements must be Comparable.
+
 </details>
 
 <details>
-<summary>Task 2.</summary>
-This task creates an array of integers and then calls a function called findAvg to find the average value of the elements in the array. The findAvg function is a recursive function that takes an array and the length of that array as inputs and returns the sum of the elements in the array.
-</details>
-
-<details>
-<summary>Task 3.</summary>
-This task checks whether a given number is prime or composite. It does this by calling a function called checkComp which is a recursive function that takes a number to check and the number itself as inputs. It returns "Prime" if the number is prime, and "Composite" if the number is composite.
-</details>
-
-<details>
-<summary>Task 4.</summary>
-This task finds the factorial of a given number by calling a function called findFactorial. The findFactorial function is a recursive function that takes a number as input and returns the factorial of that number.
-</details>
-
-<details>
-<summary>Task 5.</summary>
-This task finds the nth term of the Fibonacci sequence by calling a function called findFibonacci. The findFibonacci function is a recursive function that takes a number as input and returns the nth term of the Fibonacci sequence.
-</details>
-
-<details>
-<summary>Task 6.</summary>
-This task finds the nth power of a given number by calling a function called findPower. The findPower function is a recursive function that takes a number and the power to raise that number to as inputs, and returns the nth power of that number.
-</details>
-
-<details>
-<summary>Task 7.</summary>
-This task reverses an array by calling a function called makeReverse. The makeReverse function is a recursive function that takes the size of the array as input and then reads in the elements of the array from the user using a scanner. It then recursively prints out the elements of the array in reverse order.
-</details>
-
-<details>
-<summary>Task 8.</summary>
-This task checks if a given string consists only of digits by calling a function called checkForDigits. The checkForDigits function is a recursive function that takes an array of characters and the length of that array as inputs and returns "Yes" if the string consists only of digits, and "No" otherwise.
-</details>
-
-<details>
-<summary>Task 9.</summary>
-This task finds the binomial coefficient (n choose k) by calling a function called findBinomialCoeff. The findBinomialCoeff function is a recursive function that takes two numbers, n and k, as inputs and returns the binomial coefficient (n choose k).
-</details>
-
-<details>
-<summary>Task 10.</summary>
-Task 10 calculates the greatest common divisor (GCD) of two integers. The function takes two integer parameters, and uses recursion to calculate the GCD by using the modulo operator to find the remainder of the first integer divided by the second integer. The function returns the second integer if the remainder is zero, or recursively calls itself with the second integer as the first parameter and the remainder as the second parameter until the remainder is zero.
+<summary>myLinkedList class</summary>
+MyLinkedList is a class that implements the MyList interface. The MyLinkedList class represents a singly linked list data structure that allows for fast adding and removing of elements.
+ 
+public int size(): Returns an int representing the number of elements in the linked list.
+ 
+public void add(T item): Adds an element to the end of the list.
+ 
+public void add(T item, int index): Adds an element at the specified index.
+ 
+public T get(int index): Returns the element at the specified index in the list.
+ 
+public void remove(int index): Removes the element at the specified index from the list.
+ 
+public void checkIndex(int index): Throws an IndexOutOfBoundsException if the given index is out of range.
+ 
+public boolean contains(Object o): Finds the specified element in the linked list.
+ 
+public int indexOf(Object o): Returns the index of the first occurrence of the specified element in the list, or -1 if not found.
+ 
+public int lastIndexOf(Object o): Returns the index of the last occurrence of the specified element in the list, or -1 if not found.
 </details>
 
 ## Install
  Copy the code from Main.java file to your project.  
+ **IMPORTANT:** You will need to remove the comments to run the code.
 
 ## Download
 Compiled binary material can be found at [releases](https://github.com/alisheriq/algorithms/tree/master/src).
