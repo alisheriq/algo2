@@ -8,8 +8,11 @@ public class MyLinkedListQueue<T>{
         arr.add(item, arr.size() - 1);
     }
     public T dequeue() {
-        T element = (T) arr.get(0);
+        T element = arr.get(0);
         arr.remove(0);
         return element;
+    }
+    public T peek(){
+        return arr.get(0);
     }
 }
