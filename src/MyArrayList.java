@@ -42,19 +42,6 @@ public class MyArrayList<T> implements MyList<T>{
             arr[size++] = array[i];
         }
     }
-    public void addArray(Object[] array, int index){
-        checkIndex(index);
-        if(size == arr.length){
-            increaseBuffer();
-        }
-        size = size + array.length;
-        for(int i= size-1; i>array.length; i--){
-            arr[i] = arr[i-array.length];
-        }
-        for(int i= 0; i<array.length; i++){
-            arr[index++] = array[i];
-        }
-    }
     // get(index) - returns the item at the specified index
     @Override
     public T get(int index) {
