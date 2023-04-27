@@ -4,7 +4,8 @@
 ---
 
 ## Tasks from
-- [Moodle of Astana IT](https://moodle.astanait.edu.kz/mod/assign/view.php?id=80149)
+- [Assignment 2](https://moodle.astanait.edu.kz/mod/assign/view.php?id=80149)
+- [Assignment 3](https://moodle.astanait.edu.kz/mod/assign/view.php?id=81243)
 
 ## Build
 IntelliJ IDEA
