@@ -1,4 +1,4 @@
-# Assigment 2 by Alisher Kulbossynov
+# Assigments 2 & 3 by Alisher Kulbossynov
 # Course: Algorithms and Data Structures
 # Teacher: Nursultan Khaimuldin
 ---
@@ -10,7 +10,7 @@
 IntelliJ IDEA
 - I used v2022.3.1
 
-## Explanation of the Assignment
+## Explanation of the Assignment 2
 <details>
 <summary>myArrayList class</summary>
 The MyArrayList class is a generic class that implements the MyList interface. It represents a dynamic array that can hold objects of any type. 
@@ -78,6 +78,8 @@ private Node prev: A reference to the previous node in the list.
  
 public Node(T element, Node next, Node prev): A constructor for the Node class that takes in an element, a reference to the next node, and a reference to the previous node.
 </details>
+
+## Explanation of the Assignment 3
 
 ## Install
  Copy the code from Main.java file to your project.  
