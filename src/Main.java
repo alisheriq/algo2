@@ -14,6 +14,7 @@ public class Main {
         MyArrayListStack myArrayListStack = new MyArrayListStack();
         myArrayListStack.push("1");
         myArrayListStack.push("2");
+        System.out.println(myArrayListStack.peek());
         System.out.println(myArrayListStack.pop());
         System.out.println(myArrayListStack.pop());
     }
