@@ -80,6 +80,15 @@ public Node(T element, Node next, Node prev): A constructor for the Node class t
 </details>
 
 ## Explanation of the Assignment 3
+<details>
+<summary>MyArrayListStack class</summary>
+
+</details>
+
+<details>
+<summary>MyLinkedListQueue class</summary>
+
+</details>
 
 ## Install
  Copy the code from Main.java file to your project.  
