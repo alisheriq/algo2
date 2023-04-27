@@ -1,3 +1,4 @@
 import java.util.NoSuchElementException;
-public class MyLinkedListQueue {
+public class MyLinkedListQueue<T>{
+    private MyLinkedList<T> arr;
 }
