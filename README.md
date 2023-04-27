@@ -83,7 +83,17 @@ public Node(T element, Node next, Node prev): A constructor for the Node class t
 ## Explanation of the Assignment 3
 <details>
 <summary>MyArrayListStack class</summary>
+The MyArrayListStack class is an implementation of a stack using an ArrayList data structure. It provides the following methods:
 
+- Constructor
+MyArrayListStack() - Constructs a new MyArrayListStack object.
+
+- Methods
+push(T item) - Adds the specified element to the top of the stack.
+pop() - Removes and returns the top element of the stack. Throws an EmptyStackException if the stack is empty.
+peek() - Returns the top element of the stack without removing it. Throws an EmptyStackException if the stack is empty.
+isEmpty() - Returns a boolean indicating whether the stack is empty or not.
+getSize() - Returns the number of elements in the stack.
 </details>
 
 <details>
