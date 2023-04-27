@@ -12,4 +12,7 @@ public class MyArrayListStack<T> {
         arr.remove(0);
         return element;
     }
+    public T peek(){
+        return (T) arr.get(0);
+    }
 }
