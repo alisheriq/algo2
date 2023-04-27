@@ -15,4 +15,8 @@ public class MyLinkedListQueue<T>{
     public T peek(){
         return arr.get(0);
     }
+    public boolean isEmpty() {
+        if (arr.size() == 0) return true;
+        return false;
+    }
 }
