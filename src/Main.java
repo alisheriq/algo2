@@ -11,21 +11,10 @@ public class Main {
         System.out.println(myLinkedList.get(2));
         System.out.println(myLinkedList.get(3));
         System.out.println(myLinkedList.get(4));*/
-        MyLinkedList myLinkedList = new MyLinkedList();
-        myLinkedList.add("Kazakhstan");
-        myLinkedList.add("Georgia");
-        myLinkedList.add("Canada");
-        myLinkedList.add("Pakistan");
-        myLinkedList.add("Japan");
-        myLinkedList.add("Iran");
-        myLinkedList.sortSublist(1,5);
-        System.out.println(myLinkedList.get(0));
-        System.out.println(myLinkedList.get(1));
-        System.out.println(myLinkedList.get(2));
-        System.out.println(myLinkedList.get(3));
-        System.out.println(myLinkedList.get(4));
-        System.out.println(myLinkedList.get(5));
-
-
+        MyArrayListStack myArrayListStack = new MyArrayListStack();
+        myArrayListStack.push("1");
+        myArrayListStack.push("2");
+        System.out.println(myArrayListStack.pop());
+        System.out.println(myArrayListStack.pop());
     }
 }

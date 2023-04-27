@@ -23,7 +23,7 @@ public class MyArrayList<T> implements MyList<T>{
     // add(item, index) - adds an item to the specified index, shift the elements to the right to make room for the new item, increase the buffer if the array is full
     @Override
     public void add(Object item, int index){
-        checkIndex(index);
+        if (index != 0) checkIndex(index);
         if(size == arr.length){
             increaseBuffer();
         }
