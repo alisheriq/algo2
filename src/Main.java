@@ -17,7 +17,7 @@ public class Main {
         myLinkedList.add("Canada");
         myLinkedList.add("Pakistan");
         myLinkedList.add("Japan");
-        myLinkedList.add("HADsha");
+        myLinkedList.add("Iran");
         myLinkedList.sortSublist(1,5);
         System.out.println(myLinkedList.get(0));
         System.out.println(myLinkedList.get(1));
