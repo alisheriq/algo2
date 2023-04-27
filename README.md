@@ -101,7 +101,20 @@ getSize() - Returns the number of elements in the stack.
 
 <details>
 <summary>MyLinkedListQueue class</summary>
+ 
+The MyLinkedListQueue class is an implementation of a queue using a linked list data structure. It provides the following methods:
 
+MyLinkedListQueue() - Constructs a new MyLinkedListQueue object.
+ 
+enqueue(T item) - Adds the specified element to the back of the queue.
+ 
+dequeue() - Removes and returns the front element of the queue. Throws a NoSuchElementException if the queue is empty.
+ 
+peek() - Returns the front element of the queue without removing it. Throws a NoSuchElementException if the queue is empty.
+ 
+isEmpty() - Returns a boolean indicating whether the queue is empty or not.
+ 
+size() - Returns the number of elements in the queue.
 </details>
 
 ## Install
