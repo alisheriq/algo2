@@ -12,6 +12,7 @@ public class Main {
         System.out.println(myLinkedList.get(3));
         System.out.println(myLinkedList.get(4));*/
         MyArrayListStack myArrayListStack = new MyArrayListStack();
+        System.out.println(myArrayListStack.isEmpty());
         myArrayListStack.push("1");
         myArrayListStack.push("2");
         System.out.println(myArrayListStack.peek());
