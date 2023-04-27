@@ -11,12 +11,18 @@ public class MyArrayListStack<T> {
     }
 
     public T pop() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
         T element = (T) arr.get(0);
         arr.remove(0);
         return element;
     }
 
     public T peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
         return (T) arr.get(0);
     }
     public boolean isEmpty() {
