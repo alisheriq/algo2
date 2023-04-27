@@ -15,8 +15,10 @@ public class Main {
         System.out.println(myArrayListStack.isEmpty());
         myArrayListStack.push("1");
         myArrayListStack.push("2");
+        System.out.println(myArrayListStack.getSize());
         System.out.println(myArrayListStack.peek());
         System.out.println(myArrayListStack.pop());
         System.out.println(myArrayListStack.pop());
+        System.out.println(myArrayListStack.getSize());
     }
 }
