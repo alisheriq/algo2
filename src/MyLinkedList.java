@@ -193,7 +193,6 @@ public class MyLinkedList<T> implements MyList<T> {
         if (size <= 1) {
             return;
         }
-
         do {
             swapped = false;
             current = head;
@@ -209,6 +208,50 @@ public class MyLinkedList<T> implements MyList<T> {
             }
             last = current;
         } while (swapped);
+    }
+    public void sortSublist(int index1, int index2){
+        boolean swapped;
+        Node current;
+        Node last = getNode(index2);
+        if(index2 == size-1){
+            last = null;
+        }
+        T temp;
+        if(size <= 1){
+            return;
+        }
+        do {
+            swapped = false;
+            current = getNode(index1);
+            while(current.next != last){
+                if(((Comparable<T>)current.element).compareTo(current.next.element)>0){
+                    temp = current.element;
+                    current.element = current.next.element;
+                    current.next.element = temp;
+                    swapped = true;
+                }
+                current = current.next;
+            }
+            last = current;
+        }
+        while(swapped);
+    }
+    public Node getNode(int index) {
+        checkIndex(index);
+        Node current;
+        if (index <= size / 2) {
+            current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+        }
+        else {
+            current = tail;
+            for (int i = size - 1; i > index; i--) {
+                current = current.prev;
+            }
+        }
+        return current;
     }
     // clear - a method that removes all elements from the list
     @Override
