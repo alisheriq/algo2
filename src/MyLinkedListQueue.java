@@ -19,4 +19,7 @@ public class MyLinkedListQueue<T>{
         if (arr.size() == 0) return true;
         return false;
     }
+    public int size() {
+        return arr.size();
+    }
 }
