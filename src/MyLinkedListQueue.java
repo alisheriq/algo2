@@ -4,4 +4,7 @@ public class MyLinkedListQueue<T>{
     public MyLinkedListQueue() {
         arr = new MyLinkedList<T>();
     }
+    public void enqueue(T item) {
+        arr.add(item, arr.size() - 1);
+    }
 }
